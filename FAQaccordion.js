@@ -4,10 +4,10 @@ listsBoxes.forEach((list) =>{
     list.addEventListener("click", listHandler);
 });
 
-function listHandler (element) {
-    element.preventDefault();
-    let returnBox = element.target.closest(".list__item-img");
-    let returnContent = element.target.nextElementSibling;
+function listHandler (event) {
+    event.preventDefault();
+    let returnBox = event.target.closest(".list__item-img");
+    let returnContent = returnBox.nextElementSibling;
     
     returnBox.classList.toggle("active");
     if (returnBox.classList.contains("active")) {
